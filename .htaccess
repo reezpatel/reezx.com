@@ -1,0 +1,10 @@
+DirectoryIndex index.html index.php
+ErrorDocument 404 error.html
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.yourdomain.com [NC]
+RewriteRule ^(.*)$ http://yourdomain.com/$1 [L,R=301]
+
+allow from all
+
